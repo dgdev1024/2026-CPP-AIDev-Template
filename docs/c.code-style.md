@@ -699,7 +699,6 @@ A typical C project layout:
 
 ```
 project/
-├── docs/               # Specifications and documentation
 ├── include/             # Public headers (or inline in src/)
 │   └── project/
 │       ├── module_a.h
@@ -707,13 +706,14 @@ project/
 ├── src/                 # Source files and private headers
 │   ├── module_a.c
 │   └── module_b.c
-├── tests/               # Test source files
+├── tests/               # Test source files (for unit tests, integration tests, etc.)
 │   ├── test_module_a.c
 │   └── test_module_b.c
-├── scripts/             # Build and utility scripts
-├── CMakeLists.txt       # or premake5.lua, Makefile, etc.
-└── README.md
+└── CMakeLists.txt       # or premake5.lua, Makefile, etc. for project-level builds
 ```
+
+**Note**: The parent folder of the above structure is in the `projects/` directory
+of the workspace's root folder structure.
 
 ### Compilation Warnings
 

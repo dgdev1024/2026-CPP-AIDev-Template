@@ -207,13 +207,13 @@ Place test files in the test directory organized by component:
 //
 // Test: <Category>/<Test Name>
 // File: tests/<category>_<test-name>.cpp
-// Step: NNN - <Step Name>
+// Step: P.S - <Step Name>
 //
 // Description:
 //   <Brief description of what this test validates>
 //
 // Requirements Tested:
-//   - REQ-NNN-MM: <description>
+//   - REQ-P.S-MM: <description>
 //
 
 #include "framework.hpp"          // Test framework header
@@ -250,11 +250,11 @@ TEST_CASE("<Category>: <Test Name>", "[<tag>]") {
 When adding entries to the **Steps** section, use this format:
 
 ```markdown
-### Step NNN: Descriptive Name
+### Step P.S: Descriptive Name
 
 | Attribute       | Value                                                    |
 |-----------------|----------------------------------------------------------|
-| **Step File**   | [NNN-descriptive-name.md](<steps-dir>/NNN-desc-name.md)  |
+| **Step File**   | [P.S-descriptive-name.md](<steps-dir>/P.S-desc-name.md)  |
 | **Status**      | 🔴 Not Started / 🟡 In Progress / 🟢 Complete            |
 | **Purpose**     | Brief one-line summary of the step's purpose             |
 | **Components**  | Comma-separated list of affected components              |
@@ -281,7 +281,7 @@ necessary at this point in the development process.
 Use this template when creating step documents in the step documents directory:
 
 ```markdown
-# Step NNN: Descriptive Name
+# Step P.S: Descriptive Name
 
 | Attribute       | Value                                      |
 |-----------------|--------------------------------------------|
@@ -312,8 +312,8 @@ Description of the current implementation state relevant to this step.
 
 Numbered, testable requirements that must be satisfied:
 
-1. **REQ-NNN-01**: <Specific, testable requirement>
-2. **REQ-NNN-02**: <Specific, testable requirement>
+1. **REQ-P.S-001**: <Specific, testable requirement>
+2. **REQ-P.S-002**: <Specific, testable requirement>
 3. ...
 
 ## Design
@@ -341,10 +341,10 @@ Ordered list of implementation tasks:
 
 ## Test Plan
 
-| Test ID  | Description              | Setup                | Expected Result        |
-|----------|--------------------------|----------------------|------------------------|
-| T-NNN-01 | <Test description>       | <Setup details>      | <Expected outcome>     |
-| T-NNN-02 | <Test description>       | <Setup details>      | <Expected outcome>     |
+| Test ID   | Description              | Setup                | Expected Result        |
+|-----------|--------------------------|----------------------|------------------------|
+| T-P.S-001 | <Test description>       | <Setup details>      | <Expected outcome>     |
+| T-P.S-002 | <Test description>       | <Setup details>      | <Expected outcome>     |
 
 ## Acceptance Criteria
 
@@ -404,8 +404,8 @@ pipeline and what new functionality will be needed.
 
 | Component         | Path                                | Description                          |
 |-------------------|-------------------------------------|--------------------------------------|
-| <Library/Module>  | `<src/path/>`                       | <Description>                        |
-| <Tool/App>        | `<src/path/>`                       | <Description>                        |
+| <Library/Module>  | `projects/<name>/`                  | <Description>                        |
+| <Tool/App>        | `projects/<name>/`                  | <Description>                        |
 
 ### Build System
 
@@ -421,7 +421,7 @@ pipeline and what new functionality will be needed.
 |-------------------|-------------------------------------|--------------------------------------|
 | Steps Files       | `docs/*.steps.md`                   | Projects' steps files (including this one) |
 | Step Documents    | `docs/*.steps/*.md`                 | Individual step documents with detailed plans and notes |
-| Test Files        | `tests/`                            | C/C++ test cases                     |
+| Test Files        | `projects/<name>/tests/`            | C/C++ test cases                     |
 
 ## Suggested Development Roadmap
 

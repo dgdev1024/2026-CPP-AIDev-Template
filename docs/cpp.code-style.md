@@ -1106,7 +1106,6 @@ A typical C++ project layout:
 
 ```
 project/
-├── docs/               # Specifications and documentation
 ├── include/             # Public headers (or inline in src/)
 │   └── project/
 │       ├── module_a.hpp
@@ -1114,13 +1113,14 @@ project/
 ├── src/                 # Source files and private headers
 │   ├── module_a.cpp
 │   └── module_b.cpp
-├── tests/               # Test source files
+├── tests/               # Test source files (for unit tests, integration tests, etc.)
 │   ├── test_module_a.cpp
 │   └── test_module_b.cpp
-├── scripts/             # Build and utility scripts
-├── CMakeLists.txt       # or premake5.lua, Makefile, etc.
-└── README.md
+└── CMakeLists.txt       # or premake5.lua, Makefile, etc. for project-level builds
 ```
+
+**Note**: The parent folder of the above structure is in the `projects/` directory
+of the workspace's root folder structure.
 
 ### Compilation Warnings
 
